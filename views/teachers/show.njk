@@ -13,35 +13,36 @@
 
             <div class="items">
                 <div>Nome Completo</div>
-                <div>Noami silva</div>
+                <div>{{teacher.name}}</div>
             </div>
 
             <div class="items">
                 <div>Idade</div>
-                <div>28</div>
+                <div>{{teacher.birth}}</div>
             </div>
             
             <div class="items">
                 <div>Grau de escolaridade</div>
-                <div>Doutorado</div>
+                <div>{{teacher.education_level}}</div>
             </div>
 
             <div class="items">
                 <div>Tipo de aula</div>
-                <div>Presencial</div>
+                <div>{{teacher.class_type}}</div>
             </div>
 
             <div class="items">
                 <div>Acompanhamento</div>
                 <div>
-                    <span>Matematica</span>
-                    <span>Fisíca</span>
+                    {%for item in teacher.knowledge%}
+                        <span>{{item}}</span>
+                    {%endfor%}
                 </div>
             </div>
 
             <div class="items">
                 <div>Desde</div>
-                <div>21/12/1944</div>
+                <div>{{teacher.since}}</div>
             </div>
         
 

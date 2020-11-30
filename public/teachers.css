@@ -53,7 +53,14 @@
     color: rgb(59, 59, 59);
 }
 
-
+.details .items span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(251, 255, 0, 0.966);
+    border-radius: 14px;
+    font-size: 1.3rem;
+    color: #555;
+}
 
 /* //KeyFrames\\ */
 
@@ -64,4 +71,28 @@
     to {
         opacity: 1;
     }
+}
+
+/* //Form\\ */
+
+form input {
+    width: 100%;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 0.4rem;
+}
+
+button[type="submit"] {
+    background-color: #15A85D;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    border-radius: 1.6rem;
+    color: white;
 }

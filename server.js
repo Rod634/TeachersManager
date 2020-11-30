@@ -8,6 +8,7 @@ const server = express();
 server.set("view engine", "njk");
 
 //Define um diretório onde idel para vc acessar itens de estilo
+server.use(express.urlencoded({extended: true}));
 server.use(express.static('public'));
 server.use(routes);
 
