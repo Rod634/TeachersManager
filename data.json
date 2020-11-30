@@ -1,0 +1,37 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://asasas.om",
+      "name": "Rodrigo Conceição Da Silva",
+      "birth": 953596800000,
+      "gender": "M",
+      "education_level": "Mestrado",
+      "class_type": "Presencial",
+      "knowledge": "Inglês",
+      "since": 1606729410335
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://asasas.om",
+      "name": "Rodrigo Conceição Da Silva",
+      "birth": 953596800000,
+      "gender": "M",
+      "education_level": "Mestrado",
+      "class_type": "Presencial",
+      "knowledge": "Inglês",
+      "since": 1606729478625
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://asasas.om",
+      "name": "Rodrigo Conceição Da Silva",
+      "birth": 953596800000,
+      "gender": "M",
+      "education_level": "Mestrado",
+      "class_type": "Presencial",
+      "knowledge": "Inglês",
+      "since": 1606729682766
+    }
+  ]
+}

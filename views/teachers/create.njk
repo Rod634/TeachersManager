@@ -1,0 +1,78 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/teachers.css">
+{% endblock head %}
+
+{% block content %}
+    <form class="card" method="POST" action="/teachers">
+        <section class="avatar"></section>
+        <section class="details">
+
+            <h3>Detalhes</h3>
+
+            <div class="items">
+                <div>URL do Avatar</div>
+                <div>
+                    <input type="url"
+                    name="avatar_url"
+                    placeholder="https://url.com">
+                </div>
+            </div>
+
+            <div class="items">
+                <div>Nome Completo</div>
+                <div>
+                    <input type="text"
+                    name="name"
+                    placeholder="Marcelo da silva">
+                </div>
+            </div>
+
+            <div class="items">
+                <div>Data de nascimento</div>
+                <div>
+                    <input type="date"
+                    name="birth">
+                </div>
+            </div>
+
+            <div class="items">
+                <div>Sexo</div>
+                <div>
+                    <span><input type="radio" name="gender" value="M">Masculino</span>
+                    <span><input type="radio" name="gender" value="M">Feminino</span>
+                </div>
+            </div>
+            
+            <div class="items">
+                <div>Grau de escolaridade</div>
+                <div>
+                    <input type="text"
+                    name="education_level" 
+                    placeholder="Mestrado">
+                </div>
+            </div>
+
+            <div class="items">
+                <div>Tipo de aula</div>
+                <div>
+                    <input type="text" 
+                    name="class_type" 
+                    placeholder="Presencial">
+                </div>
+            </div>
+
+            <div class="items">
+                <div>Acompanhamento</div>
+                <div>
+                    <input type="text" 
+                    name="knowledge" 
+                    placeholder="Inglês">
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>
+        </section>
+    </form>
+{% endblock content %}
