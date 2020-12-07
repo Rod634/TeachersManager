@@ -1,5 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
+const { age, data_format } = require("./utils");
 
 exports.show = function(req, res){
     const id = req.params.index;
@@ -10,7 +11,9 @@ exports.show = function(req, res){
 
     const teacher = {
         ...findteacher,
-        knowledge: findteacher.knowledge.split(",")
+        knowledge: findteacher.knowledge.split(","),
+        age: age(findteacher.birth),
+        since: new Intl.DateTimeFormat("pt-BR").format(findteacher.since)
     }
 
     if(!findteacher){
@@ -53,8 +56,32 @@ exports.post = function(req, res) {
         if(err){
             return res.send("Ops! file data error, try later");
         }
-         return res.rendirect("/teachers");
+
+        return res.redirect("/teachers");
     })
 
    
+   
+}
+
+exports.edit = function(req, res) {
+    const id = req.params.index;
+
+    let findteacher = data.teachers.find(function(teacher){
+        return teacher.id = id;
+    })
+
+    if(findteacher){
+
+        const teacher = {
+            ...findteacher,
+            knowledge: findteacher.knowledge.split(","),
+            birth: data_format(findteacher.birth)
+        }
+
+        return res.render("teachers/edit", {teacher});
+
+    }else {
+        return res.send("Teacher not found");
+    }
 }

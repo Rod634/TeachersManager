@@ -16,6 +16,8 @@ routes.get("/teachers/create", function(req, res){
 
 routes.get("/teachers/:index", teachers.show);
 
+routes.get("/teachers/:index/edit", teachers.edit);
+
 routes.get("/members", function(req, res){
     return res.render("members");
 });
